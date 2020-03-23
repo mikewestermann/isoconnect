@@ -1,0 +1,57 @@
+{% extends "base.html" %} 
+{% block title %}Create Card{% endblock title %} 
+{% block content %}
+
+<h1>Erstelle eine neue Maschinen Card</h1>
+
+<div class="row mt-4">
+  <div class="col-md-5">
+    <form method="post">
+      <input type="hidden" name="csrf" value="{{ csrf_token }}" />
+      <div class="form-group">
+        <label for="name">Maschine</label>
+        <select class="form-control" id="name" name="name">
+           <option name="EFM-L">EFM-L</option>
+           <option name="UNICUT">UNICUT</option>
+           <option value="FLEXCUT">FLEXCUT</option>
+           <option value="EASYCUT">EASYCUT</option>
+           <option value="SMA">SMA</option>
+           <option value="SMW">SMW</option>
+           <option value="WSRM">WSRM</option>
+           <option value="KSM">KSM</option>
+           <option value="RLM">RLM</option>
+         </select>
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="baujahr"
+          placeholder="Baujahr"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="maschinennummer"
+          placeholder="Maschinennummer"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="standort"
+          placeholder="Standort"
+          required
+        />
+      </div>
+      <button class="btn btn-light">Erstellen</button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

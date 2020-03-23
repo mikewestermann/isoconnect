@@ -1,0 +1,73 @@
+body {
+    margin: 0rem;
+}
+
+.nav-item {
+    list-style-type: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+}
+
+.flex-container {
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+}
+  
+.flex-container > div {
+    background-color: whitesmoke;
+    width: 50%;
+    margin: 2rem;
+    height: auto;
+}
+
+.jumbo {
+    width: 100%;
+    height: 600px;
+    display: block;
+    position: relative;
+}
+  
+.jumbo::after {
+    content: "";
+    background: url(/static/css/img/martin-adams-a_PDPUPuNZ8-unsplash.jpg);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.signup {
+    display: flex;
+    background-color: #2f6cb7;
+    justify-content: space-evenly;
+}
+
+#blau {
+    background-color: #2f6cb7;
+    width: 50%;
+    margin: auto;
+    height: auto;
+}
+
+#grau {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    height: auto;
+}
+
+.form-group {
+    color: #da7b00;
+    padding: 0,5rem;
+}
+
+
+
+
+
+

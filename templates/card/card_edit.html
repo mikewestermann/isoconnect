@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Card anpassen{% endblock title %}
+
+{% block content %}
+
+<h1> Maschinen Card anpassen: {{ card.name }}</h1>
+
+<div class="row mt-4">
+    <div class="col-md-5">
+        <form method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" value="{{card.name}}" required>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" name="text" rows="5" required>{{topic.text}}</textarea>
+            </div>
+            <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="baujahr"
+                  value="{{card.baujahr}}"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="maschinennummer"
+                  value="{{card.maschinennummer}}"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="standort"
+                  value="{{card.standort}}"
+                  required
+                />
+              </div>
+            <button class="btn btn-light">Anpassen</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

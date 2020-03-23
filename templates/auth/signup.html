@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Signup{% endblock title %}
+
+{% block content %}
+<h1>Registrierung für Schwartmanns ISOconnect</h1>
+
+<div class="signup">
+
+  <div id="blau">
+    <h2 style="color:#da7b00; margin: 20px; font-size: 60px;">"Gemeinsam die Digitalisierung vorantreiben!"</h2>
+    <h4 style="color:#da7b00; margin: 15px;">Registrieren Sie sich für das neue Onlineportal von Schwartmanns und nutzen die innovativen Tools, um Ihr Unternehmen für die Zukunft vorzubereiten.</h4>
+    <h7 style="color:#da7b00; margin: 15px;">#ISOconnect</h7>
+  </div>
+  <div id="grau">
+    <form method="POST"> 
+      <div class="form-group">
+        <label for="exampleInputVorname1">Vorname</label>
+        <input type="text" name="vorname" placeholder="Vorname" required class="form-control" id="exampleInputVorname1" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputNachname1">Nachname</label>
+        <input type="text" name="nachname" placeholder="Nachname" required class="form-control" id="exampleInputNachname1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputUnternehmen1">Name des Unternehmens</label>
+        <input type="text" name="unternehmen" placeholder="Name des Unternehmens" required class="form-control" id="exampleInputUnternehmen1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputNachname1">Position im Unternehmen</label>
+        <input type="text" name="position" placeholder="Position im Unternehmen" required class="form-control" id="exampleInputPosition1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Emailadresse</label>
+        <input type="email" name="email_adresse" placeholder="Emailadresse" required class="form-control" id="exampleInputEmail1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPasswort1">Passwort</label>
+        <input type="password" name="passwort" placeholder="Passwort" required class="form-control" id="exampleInputPasswort1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPasswortwiederholen1">Passwort wiederholen</label>
+        <input type="password" name="passwort_wiederholen" placeholder="Passwort wiederholen" required class="form-control" id="exampleInputPasswortwiederholen1">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">AGB´s und Datenschutz akzeptieren.</label>
+      </div>
+      <button class="btn btn-primary">Registrieren</button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

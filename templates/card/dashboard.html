@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | ISOconnect{% endblock title %}
+
+{% block content %}
+<h1>Ihre Maschinen</h1>
+<a class="btn btn-outline-primary" style="color: coral; border-color: coral; outline-color: coral; background-color: coral;" href="/card_create" role="button">Neue Maschine anlegen</a>
+
+<div class="container">
+  <div class="row">
+    {% for card in cards %}
+    <div class="col-sm">
+      <table style="height: 80px;">
+        <tbody>
+          <tr>
+            <td class="align-top">
+              <div class="card" style="width: 20rem;">
+                <img src="" class="card-img-top" alt="..." style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Name der Maschine: {{ card.name }} </h5>
+                  <p class="card-text">Kurzer Text zur Maschine: {{ card.machine.text }} </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Baujahr: {{ card.baujahr }}</li>
+                  <li class="list-group-item">Maschinennummer: {{ card.maschinennummer }}</li>
+                  <li class="list-group-item">Standort: {{ card.standort }}</li>
+                  <li class="list-group-item">
+                    <ul>
+                      <li>Leistung: {{ card.machine.leistung }}</li>
+                      <li>Spannung: {{ card.machine.spannung }}</li>
+                      <li>Stromstärke: {{ card.machine.strom }}</li>
+                      <li>Blechstärke: {{ card.machine.blechstaerke }}</li>
+                    </ul> 
+                  </li>
+                  <li class="list-group-item">Variable Daten</li>
+                </ul>
+                <div class="card-body">
+                  <a href="https://www.schwartmanns.de/de/" class="card-link">Webseite</a>
+                  <a href="/card_edit.html" class="card-link">Maschine anpassen</a>
+                  <a href="card/card_delete.html" class="card-link">Maschine löschen</a>
+                  <a href="/card_details.html" class="card-link">Weitere Details</a>
+                </div>
+              </div>
+            
+          </tr>
+        </tbody>
+    </table>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

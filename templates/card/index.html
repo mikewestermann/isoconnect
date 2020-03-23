@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock title %}
+
+{% block content %}
+
+	<div class="jumbo">
+		{% if user %}
+		<h1 class="display-4">Herzlich Willkommen, {{user.vorname}} {{user.nachname}}</h1>
+		<p class="lead">Sie sind jetzt Teil der neuen digitalen Welt von Schwartmanns!</p>
+		<hr class="my-4">
+		<p>Nutzen Sie die vielen Vorteile dieser Plattform und bringen Ihren Workflow auf ein ganz neues Level.</p>
+		<a class="btn btn-primary btn-lg" href="/dashboard" role="button">Zum Dashboard</a>
+		{% else %}
+		<h1 class="display-4">Herzlich Willkommen</h1>
+		<p class="lead">Werden Sie Teil der neuen digitalen Welt von Schwartmanns!</p>
+		<hr class="my-4">
+		<p>Nutzen Sie die vielen Vorteile dieser Plattform und bringen Ihren Workflow auf ein ganz neues Level.</p>
+		<a class="btn btn-primary btn-lg" href="/signup" role="button">Registrieren</a>
+		{% endif%}
+	</div>
+
+	<div class="flex-container">
+		<div>
+			<img src="/static/css/img/jorgen-hendriksen-7uu-sbnqCo4-unsplash.jpg" alt="Control" width="60%">
+		</div>
+		<div>
+			<h2>Übernehmen Sie die Kontrolle</h2>
+			<p>Ihr Maschinenpark digital auf einem Dashboard. Erhalten Sie alle wichtigen Informationen auf einem Blick.</p>
+		</div>
+	</div>
+
+{% endblock content %}
