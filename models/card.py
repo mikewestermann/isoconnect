@@ -15,8 +15,8 @@ class Card(db.Model):
     created = db.Column(db.DateTime, default=datetime.utcnow)
 
     @classmethod
-    def create(cls, name, baujahr, maschinennummer, standort, author,machine):
-        card = cls(name=name, baujahr=baujahr, maschinennummer=maschinennummer, standort=standort, author=author, machine=machine)
+    def create(cls, name, baujahr, maschinennummer, standort, author):
+        card = cls(name=name, baujahr=baujahr, maschinennummer=maschinennummer, standort=standort, author=author)
         db.add(card)
         db.commit()
 

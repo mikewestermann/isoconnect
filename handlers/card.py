@@ -53,6 +53,7 @@ def card_create():
     session_token = request.cookies.get("session_token")
     user = db.query(User).filter_by(session_token=session_token).first()
     
+    
 
 
     # only logged in users can create a topic
@@ -75,6 +76,7 @@ def card_create():
             baujahr = request.form.get("baujahr")
             maschinennummer = request.form.get("maschinennummer")
             standort = request.form.get("standort")
+            
                     
             # create a Card object
             card = Card.create( name=name, baujahr=baujahr, maschinennummer=maschinennummer, standort=standort, author=user)
