@@ -9,7 +9,7 @@ class Machine(db.Model):
     spannung = db.Column(db.Integer)
     stromstaerke = db.Column(db.Integer)
     blechstaerke = db.Column(db.Integer)
-    card = db.relationship("Card", backref="machine")
+    
 
 
     
